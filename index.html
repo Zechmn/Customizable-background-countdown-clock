@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Countdown Clock</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="countdown-wrapper">
+            <h1>Countdown Timer</h1>
+            
+            <div class="datetime-picker">
+                <label for="datetime">Set Target Date and Time:</label>
+                <input type="datetime-local" id="datetime" name="datetime">
+                <button id="start-btn">Start Countdown</button>
+                <button id="reset-btn">Reset</button>
+            </div>
+            
+            <div class="countdown-display">
+                <div class="time-section">
+                    <div class="time-value" id="days">00</div>
+                    <div class="time-label">Days</div>
+                </div>
+                <div class="time-section">
+                    <div class="time-value" id="hours">00</div>
+                    <div class="time-label">Hours</div>
+                </div>
+                <div class="time-section">
+                    <div class="time-value" id="minutes">00</div>
+                    <div class="time-label">Minutes</div>
+                </div>
+                <div class="time-section">
+                    <div class="time-value" id="seconds">00</div>
+                    <div class="time-label">Seconds</div>
+                </div>
+            </div>
+            
+            <div class="message" id="countdown-message"></div>
+        </div>
+        
+        <div class="background-customizer">
+            <h2>Customize Background</h2>
+            
+            <div class="background-options">
+                <h3>Preset Colors</h3>
+                <div class="color-options">
+                    <div class="color-option" data-color="#1a1a2e" style="background-color: #1a1a2e;"></div>
+                    <div class="color-option" data-color="#16213e" style="background-color: #16213e;"></div>
+                    <div class="color-option" data-color="#0f3460" style="background-color: #0f3460;"></div>
+                    <div class="color-option" data-color="#541690" style="background-color: #541690;"></div>
+                    <div class="color-option" data-color="#571845" style="background-color: #571845;"></div>
+                    <div class="color-option" data-color="#3c2a4d" style="background-color: #3c2a4d;"></div>
+                </div>
+            </div>
+            
+            <div class="background-options">
+                <h3>Preset Gradients</h3>
+                <div class="gradient-options">
+                    <div class="gradient-option" data-gradient="linear-gradient(to right, #1a1a2e, #0f3460)" style="background: linear-gradient(to right, #1a1a2e, #0f3460);"></div>
+                    <div class="gradient-option" data-gradient="linear-gradient(to right, #16213e, #541690)" style="background: linear-gradient(to right, #16213e, #541690);"></div>
+                    <div class="gradient-option" data-gradient="linear-gradient(to right, #0f3460, #e94560)" style="background: linear-gradient(to right, #0f3460, #e94560);"></div>
+                    <div class="gradient-option" data-gradient="linear-gradient(to right, #5c2a9d, #45046a)" style="background: linear-gradient(to right, #5c2a9d, #45046a);"></div>
+                    <div class="gradient-option" data-gradient="linear-gradient(45deg, #000428, #004e92)" style="background: linear-gradient(45deg, #000428, #004e92);"></div>
+                    <div class="gradient-option" data-gradient="linear-gradient(45deg, #4b6cb7, #182848)" style="background: linear-gradient(45deg, #4b6cb7, #182848);"></div>
+                </div>
+            </div>
+            
+            <div class="custom-background">
+                <h3>Custom Image URL</h3>
+                <div class="image-input">
+                    <input type="text" id="image-url" placeholder="Enter image URL">
+                    <button id="apply-image">Apply Image</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
